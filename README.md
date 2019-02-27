@@ -1,2 +1,2 @@
 # object_detection
-for dataset click [here](https://drive.google.com/open?id=1P10DXUE2v3mC1zeP6-5byZ4Izx5GDmRQ)
+It is an advance system which aims is to help blind people by informing the objects like animals,cars and bicycle etc. before them through speech. So that, they can walk and have a life better than present.
