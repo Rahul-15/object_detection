@@ -12,20 +12,20 @@ def extract_suitable_object_info(out_scores,out_boxes,out_classes,objects):
             
             if (centre_x <=250 or box[3]<=400) and lowest_left < box[2]:
                 lowest_left = box[2]
-                left_obj = objects[out_classes[ind]]
+                left_obj = objects[out_classes[ind]][:-1]
                 
             elif (centre_x >=1000 or box[1] >= 800) and lowest_right < box[2]:
                 lowest_right = box[2]
-                right_obj = objects[out_classes[ind]]
+                right_obj = objects[out_classes[ind]][:-1]
                 
             elif lowest_front < box[2]:
                 lowest_front = box[2]
-                front_obj = objects[out_classes[ind]]
+                front_obj = objects[out_classes[ind]][:-1]
     msg = ''
     if(len(front_obj)>0):
-        msg = msg + 'front '+ front_obj+'\n'
+        msg = msg + 'front '+ front_obj+' '
     if(len(left_obj)>0):
-        msg = msg + 'left '+ left_obj +'\n'
+        msg = msg + 'left '+ left_obj +' '
     if(len(right_obj)>0):
         msg = msg + 'right '+ right_obj
                 
